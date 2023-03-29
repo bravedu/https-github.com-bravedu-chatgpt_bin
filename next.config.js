@@ -1,6 +1,18 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
+  // async rewrites() {
+  //   return {
+  //     fallback: [
+  //       {
+  //         source: '/:path*',
+  //         destination: `https://www.higlo.cn/:path*`,
+  //       },
+  //     ],
+  //   }
+  // },
+  i18n: {
+    locales: ['en', 'zh'],
+    defaultLocale: 'en',
+  },
 }
-
-module.exports = nextConfig
