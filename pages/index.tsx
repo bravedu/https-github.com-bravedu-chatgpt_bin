@@ -417,7 +417,10 @@ const Home: NextPage = () => {
                     <div
                       className='bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border'
                       onClick={() => {
-                        copy(generatedDescs.trim())
+			navigator.clipboard.writeText(generatedDescs);
+                        toast("已复制内容", {
+                          icon: "✂️",
+                        });
                       }}
                     >
                       <p
