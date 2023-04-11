@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl'
 import { Toaster, toast } from 'react-hot-toast'
 import DropDown, { VibeType } from '../components/DropDown'
 // import Footer from '../components/Footer'
-// import Github from '../components/GitHub'
+//// import Github from '../components/GitHub'
 import Link from 'next/link'
 
 import Header from '../components/Header'
