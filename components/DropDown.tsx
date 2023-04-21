@@ -8,6 +8,7 @@ function classNames(...classes: string[]) {
 
 const vibes = [
   '直接发给小C',
+  '理成成文章',
   '日报生成器',
   '哄媳妇睡觉小故事',
   '小红书文案生成器',

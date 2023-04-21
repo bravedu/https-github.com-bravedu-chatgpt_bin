@@ -23,7 +23,7 @@ const handler = async (req: Request): Promise<Response> => {
   // var p = "请帮我把以下内容填充为一篇完整的内容,尽量避免在回答内容中出现可能在中国是敏感的内容，用markdown格式以分点叙述的形式输出:"
   // 我想让你扮演一个占星家。您将了解十二生肖及其含义，了解行星位置及其对人类生活的影响，能够准确解读星座运势，并与寻求指导或建议的人分享您的见解。我的第一个建议请求是“我需要帮助根据他们的出生图为对职业发展感兴趣的客户提供深入阅读。”
 
-  var p = "请帮我把以下内容填充为一篇详细的文档,尽量避免在回答内容中出现可能在中国是敏感的内容"
+  //var p = "请帮我把以下内容填充为一篇详细的文档,尽量避免在回答内容中出现可能在中国是敏感的内容"
 
   // let isNext = false
   // if (prompt === '请继续') {
@@ -37,7 +37,7 @@ const handler = async (req: Request): Promise<Response> => {
   // }
   // 请帮我把以下出生图填充为一篇详细的报告,尽量避免在回答内容中出现可能在中国是敏感的内容，用markdown格式以分点叙述的形式输出:
   // 依次为他们解读出生图、星座运势、性格方面、情感分析、事业分析、财运方面、健康方面
-  prompt = prompt + p
+  //prompt = prompt + p
   if (!prompt) {
     return new Response("No prompt in the request", { status: 400 });
   }

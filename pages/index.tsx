@@ -25,6 +25,7 @@ const Home: NextPage = () => {
   const [generatedDescs, setGeneratedDescs] = useState<string>('')
   let promptObj = {
     直接发给小C: '',
+    整理成文章:'请帮我把以下内容填充为一篇详细的文档，尽量避免在回答内容中出现可能在中国是敏感的内容',
     // 英文邮件:
     //   'Generate a business email in UK English that is friendly, but still professional and appropriate for the workplace.The topic is',
     // 中文邮件:
@@ -169,7 +170,8 @@ const Home: NextPage = () => {
       '我想让你担任私人教练。我将为您提供有关希望通过体育锻炼变得更健康、更强壮和更健康的个人所需的所有信息，您的职责是根据该人当前的健身水平、目标和生活习惯为他们制定最佳计划。您应该利用您的运动科学知识、营养建议和其他相关因素来制定适合他们的计划。我的第一个请求是'
   }
   let placeholderDefault = {
-    直接发给小C: '帮我写个中文邮件和领导请三天假去过自己的60大寿，不会耽误项目进度',
+    直接发给小C: '原文发送给C',
+    整理成文章:'请帮我把以下内容填充为一篇详细的文档，尽量避免在回答内容中出现可能在中国是敏感的内容',
     日报生成器: '修复了优惠券无法领取的bug，为产品部的新APP设计UI和图标，负责跟进部门前端工程师的招聘',
     哄媳妇睡觉小故事: '帮我生成一个500字的有意思的小故事，用来哄媳妇睡觉',
     小红书文案生成器: '请为阿玛尼405口红（烂番茄色）写一篇种草推文',
@@ -245,7 +247,9 @@ const Home: NextPage = () => {
 
   let prompt = `${promptObj[lang] ? promptObj[lang] + ':\n' : ''} ${text}${text.slice(-1) === '.' ? '' : '.'}`
   // let dialogueHistory: any = []
-
+  if (lang !== '直接发给小C') {
+    prompt = `${prompt}请帮我把以下内容填充为一篇详细的文档，尽量避免在回答内容中出现可能在中国是敏感的内容`
+  }
   const generateDesc = async (e: any) => {
     e.preventDefault()
     setGeneratedDescs('')
