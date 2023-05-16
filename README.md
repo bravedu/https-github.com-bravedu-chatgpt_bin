@@ -1,7 +1,7 @@
 
 ### 在本地运行
 
-确保你本地的npm命令生效，执行以下命令
+确保你本地的npm命令生效，执行以下命令.
 ```bash
 npm install
 npm run dev
